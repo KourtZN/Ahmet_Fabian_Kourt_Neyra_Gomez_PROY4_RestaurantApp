@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.platillo{
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+}
+.contenedorPlatillos{
+  display: flex;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
