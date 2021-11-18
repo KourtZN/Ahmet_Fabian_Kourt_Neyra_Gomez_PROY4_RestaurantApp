@@ -1,0 +1,8 @@
+.platillo{
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+  }

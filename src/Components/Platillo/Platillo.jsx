@@ -1,3 +1,6 @@
+import React from 'react'
+import './platillo.css';
+
 
 function Platillo(props) {
     return (
@@ -7,4 +10,4 @@ function Platillo(props) {
     );
   }
   
-  export default Platillo;
+  export { Platillo };

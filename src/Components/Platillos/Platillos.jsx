@@ -1,4 +1,6 @@
-import Platillo from '../Platillo/Platillo.jsx';
+import React from 'react'
+import './platillos.css'
+import { Platillo } from '../Platillo/Platillo.jsx';
 
 function Platillos() {
     return (
@@ -11,5 +13,5 @@ function Platillos() {
     );
   }
   
-  export default Platillos;
+  export default Platillos
 
