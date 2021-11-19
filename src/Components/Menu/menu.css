@@ -1,0 +1,8 @@
+.contenedorPlatillos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+    width: 90%;
+
+  }

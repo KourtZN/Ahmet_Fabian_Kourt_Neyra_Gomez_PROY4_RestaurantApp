@@ -1,26 +1,22 @@
-import './App.css';
-import { Link } from 'react-router-dom' 
+import './app.css';
+import {Encabezado} from '../Components/Encabezado/Encabezado'
+import {Piedepagina} from '../Components/Piedepagina/Piedepagina'
+
 function App(props) {
 
   return (
   <div>
-  <header>
-    <h1>Cafetería El Espiral</h1>
-    <nav>
-    <Link to='/'>Click Me</Link>
-    <Link to='/2'>Click Me 2</Link>
-    <Link to='/3'>Click Me 3</Link>
-    </nav>
-    
-  </header>
-  <main>
-  {props.children}
-    
-  </main>
+    <Encabezado/>
+
+    <main className="main">
+      {props.children}
+    </main>
   
   
 
-  <footer></footer>
+  
+  <Piedepagina/>
+  
   </div>
   )
 }

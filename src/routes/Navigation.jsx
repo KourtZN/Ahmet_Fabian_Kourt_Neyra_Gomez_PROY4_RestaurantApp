@@ -3,16 +3,17 @@ import App from '../App/App'
 //Routes
 import { Routes , Route} from 'react-router-dom'
 //sections
-import { Encabezado } from '../Components/Encabezado/Encabezado'
-import { Piedepagina } from '../Components/Piedepagina/Piedepagina'
-import Platillos from '../Components/Platillos/Platillos'
+import {Menu} from '../Components/Menu/Menu'
+import {Blog} from '../Components/Blog/Blog'
+import {FormReservar} from '../Components/FormReservar/FormReservar'
 function Navigation() {
 
     return (<App>
         <Routes>
-        <Route path="/" element={<Encabezado/>} exact/>
-        <Route path="/2" element={<Piedepagina/>} exact/>
-        <Route path="/3" element={<Platillos/>} exact/>
+        <Route path="/" element={<Menu/>} exact/>
+        <Route path="/2" element={<Menu/>} exact/>
+        <Route path="/Menu" element={<Blog/>} exact/>
+        <Route path="/Reservaciones" element={<FormReservar/>} exact/>
         </Routes>
 
     </App>
@@ -21,3 +22,8 @@ function Navigation() {
 }
 
 export {Navigation}
+
+/*
+
+Encabezado
+*/ 

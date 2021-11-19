@@ -1,8 +1,18 @@
 .platillo{
     margin: 10px;
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 20px;
+    height: 250px;
+    width: 250px;
+    border: 1px solid indigo;
+    border-radius: 10px;
     text-align: center;
+  }
+
+  .platillo h1{
+    padding: 0;
+    margin:0;
+  }
+
+  .platillo img{
+    height:200px;
+    width:230px;
   }
