@@ -6,6 +6,7 @@ function Menu() {
     return (
         <div className="contenedorPlatillos">
         <Platillo nombre="capuccino" ruta="capuchino.jpg" alt="capu"/>
+        <Platillo nombre="Latte" ruta="latte.jpg" alt="Latte"/>
         <Platillo nombre="moka" ruta="moka.jpg" alt="moka"/>
         <Platillo nombre="espresso" ruta="espresso.jpg" alt="espresso"/>
         <Platillo nombre="machiato" ruta="macchiato.jpg" alt="macchiato"/>
@@ -15,6 +16,7 @@ function Menu() {
         <Platillo nombre="galleta" ruta="galleta.jpg" alt="galleta"/>
         <Platillo nombre="chocolate" ruta="chocolate.jpg" alt="chocolate"/>
         <Platillo nombre="rebanada" ruta="rebanada.jpg" alt="rebanada"/>
+
         </div>
     );
   }

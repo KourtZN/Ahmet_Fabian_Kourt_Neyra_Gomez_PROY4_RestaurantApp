@@ -1,15 +1,17 @@
 import './app.css';
-import {Encabezado} from '../Components/Encabezado/Encabezado'
-import {Piedepagina} from '../Components/Piedepagina/Piedepagina'
+import {Encabezado} from '../Sections/Encabezado/Encabezado'
+import {Piedepagina} from '../Sections/Piedepagina/Piedepagina'
+
 
 function App(props) {
 
   return (
   <div>
+    
     <Encabezado/>
 
     <main className="main">
-      {props.children}
+    {props.children}
     </main>
   
   
