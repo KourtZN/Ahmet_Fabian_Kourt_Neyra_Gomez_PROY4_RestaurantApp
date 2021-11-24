@@ -1,34 +1,32 @@
 import React from 'react'
 import './formreservar.css'
-import { TablaReservaciones } from '../TablaReservaciones/TablaReservaciones'
 
 function FormReservar(){
     return (
 
       <div>
         <form className="reservar">
-          <label>Nombre:
-            <input type="text" />
-          </label>
-          <label>Email:
-            <input type="email" />
-          </label>
-          <label>Teléfono:
-            <input type="text" />
-          </label>
-          <label>Fecha en que nos visitarás:
-            <input type="date" />
-          </label>
-          <label>En qué horario nos vistarás:
-            <input type="time" />
-          </label>
-          <label>¿Tienes comentarios adicionales?
-            <input type="text" />
-          </label>
-            <button type="submit" >Reservar</button>
+          <label for="Nombre" className="formchild">Nombre:</label>
+            <input type="text" id="Nombre" className="formchild"/>
+          
+          <label for="email" className="formchild">Email: </label>
+            <input type="email" id="email" className="formchild"/>
+         
+          <label for="tel" className="formchild">Teléfono:</label>
+            <input type="text" id="tel" className="formchild"/>
+          
+          <label for="fecha" className="formchild">Fecha en que nos visitarás:</label>
+            <input type="date" id="fecha" className="formchild"/>
+          
+          <label for="hora" className="formchild">En qué horario nos vistarás:</label>
+            <input type="time" id="hora" className="formchild"/>
+          
+          <label for="comments" className="formchild">¿Tienes comentarios adicionales?</label>
+            <input type="text" id="comments" className="formchild"/>
+            <button type="submit" className="btnreservar">Reservar</button>
         </form>
 
-        <TablaReservaciones/>
+        
 
         </div>
       )

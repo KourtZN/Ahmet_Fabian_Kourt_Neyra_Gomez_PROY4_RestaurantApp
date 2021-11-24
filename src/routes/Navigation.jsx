@@ -7,7 +7,7 @@ import {Main} from '../Sections/Main/Main'
 import {Menu} from '../Components/Menu/Menu'
 import {Blog} from '../Components/Blog/Blog'
 import {Nosotros} from '../Components/Nosotros/Nosotros'
-import {FormReservar} from '../Components/FormReservar/FormReservar'
+import {Reservaciones} from '../Components/Reservaciones/Reservaciones'
 function Navigation() {
 
     return (<App>
@@ -16,7 +16,7 @@ function Navigation() {
         <Route path="/Menu" element={<Menu/>} exact/>
         <Route path="/Blog" element={<Blog/>} exact/>
         <Route path="/Nosotros" element={<Nosotros/>} exact/>
-        <Route path="/Reservaciones" element={<FormReservar/>} exact/>
+        <Route path="/Reservaciones" element={<Reservaciones/>} exact/>
         </Routes>
 
     </App>

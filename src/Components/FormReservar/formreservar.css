@@ -1,7 +1,12 @@
 .reservar{
     margin: auto;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 30%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: left;
+    width: 35%;
+}
+.formchild{
+    width: 48%;
+    margin: 2px 0;
 }
