@@ -1,6 +1,6 @@
 import React from 'react'
 import './formreservar.css'
-import {NameForm} from './Choreform'
+import { TablaReservaciones } from '../TablaReservaciones/TablaReservaciones'
 
 function FormReservar(){
     return (
@@ -22,10 +22,13 @@ function FormReservar(){
           <label>En qué horario nos vistarás:
             <input type="time" />
           </label>
+          <label>¿Tienes comentarios adicionales?
+            <input type="text" />
+          </label>
             <button type="submit" >Reservar</button>
         </form>
 
-        <NameForm/>
+        <TablaReservaciones/>
 
         </div>
       )

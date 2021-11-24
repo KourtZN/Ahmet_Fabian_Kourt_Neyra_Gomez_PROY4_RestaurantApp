@@ -1,0 +1,11 @@
+.tablareserv{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    width: 80%;
+    margin:auto;
+}
+.tablareserv tr,td{
+    border: 1px solid black;
+    text-align: center;
+}
