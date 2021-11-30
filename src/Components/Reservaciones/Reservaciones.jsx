@@ -75,10 +75,6 @@ function Reservaciones(){
 
             <button type="submit" className="btnreservar">Reservar</button>
         </form>
-        <div>
-            <h2>Values of the form</h2>
-            <p>{JSON.stringify(values)}</p>
-        </div>
         
 
         </div>

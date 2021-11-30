@@ -5,9 +5,11 @@ import './encabezado.css';
 function Encabezado(){
     return (   
     <header className="header">
-    <div>
-      <h1>Roca de Guía</h1>
-      <img src={require(`../../images/logo2.png`).default} alt="logo" />
+    <div className="logoyname">
+    
+    <img src={require(`../../images/logo.png`).default} alt="logo" />
+    <h1 className="titulo">Roca de Guía</h1>
+      
     </div>
     
     <nav className="navegador">

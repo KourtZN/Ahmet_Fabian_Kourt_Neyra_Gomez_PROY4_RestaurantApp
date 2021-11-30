@@ -5,8 +5,6 @@
     justify-content:space-between;
     background-color: indigo;
     color:white;
-
-
 }
 
 .header a{
@@ -31,6 +29,10 @@
 }
 
 .header img{
-    height:100px;
-    width:100px;
+    height:110px;
+    width:110px;
+    margin: 0 10px;
   }
+.logoyname{
+    display: flex;
+}
