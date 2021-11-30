@@ -1,31 +1,37 @@
 import React from 'react'
 import db from '../../firebase/config'
 import {onSnapshot, collection, addDoc} from 'firebase/firestore'
-import { FormReservar } from '../FormReservar/FormReservar'
-
 import "./reservaciones.css"
 
 function Reservaciones(){
 
     const [reservaciones, setReservaciones] = React.useState([])
     const [show, setShow] = React.useState(false)
-
-    React.useEffect(() => {
+    const [values, setValues] = React.useState({Nombre: '',email: '',tel: '',Fecha: '',Hora: '',Comentarios: ''})
+ 
+     React.useEffect(() => {
         onSnapshot(collection(db,'reservaciones'),(snapshot) => {
-            
             snapshot.docs.map((doc) => setReservaciones((prevState) => [...prevState, doc.data()]) )
         })
     },[])
+    
 
-    const handleNewReservacion = async () => {
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setValues({...values, [name]: value })
+      }
+    const handleNewReservacion = async (e) => {
 
-        const Nombre = prompt('Nombre')
-        const date = prompt('date')
-
+        e.preventDefault()
         const collectionRef = collection(db,'reservaciones')
-        const payload = {Nombre: Nombre, date: date}
-
+        const payload = values
+        var table = document.getElementById("listaReserv");
+        for(var i = table.rows.length - 1; i > 0; i--)
+        {
+            table.deleteRow(i);
+        }
         await addDoc(collectionRef, payload)
+        e.target.reset();
 
     }
 
@@ -46,11 +52,46 @@ function Reservaciones(){
     }
 
     let showFormulario = <button onClick={showForm}  className="btnreservar">Agregar Reservación</button>;
-    show ? showFormulario = <><button onClick={showForm}  className="btnreservar">Cancelar</button><FormReservar/></> : showFormulario = <button onClick={showForm}  className="btnreservar">Agregar Reservación</button>
+    show ? showFormulario = <><button onClick={showForm}  className="btnreservar">Cancelar</button>
+                            <div>
+        <form className="reservar" onSubmit={handleNewReservacion}>
+          <label for="Nombre" className="formchild">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" className="formchild" onChange={handleChange}/>
+          
+          <label for="email" className="formchild">Email: </label>
+            <input type="email" id="email" name="email" className="formchild" onChange={handleChange}/>
+         
+          <label for="tel" className="formchild">Teléfono:</label>
+            <input type="text" id="tel" name="tel" className="formchild" onChange={handleChange}/>
+          
+          <label for="fecha" className="formchild">Fecha en que nos visitarás:</label>
+            <input type="date" id="fecha" name="Fecha" className="formchild" onChange={handleChange}/>
+          
+          <label for="hora" className="formchild">En qué horario nos vistarás:</label>
+            <input type="time" id="hora" name="Hora" className="formchild" onChange={handleChange}/>
+          
+          <label for="comments" className="formchild">¿Tienes comentarios adicionales?</label>
+            <input type="text" id="comments" name="Comentarios" className="formchild" onChange={handleChange}/>
+
+            <button type="submit" className="btnreservar">Reservar</button>
+        </form>
+        <div>
+            <h2>Values of the form</h2>
+            <p>{JSON.stringify(values)}</p>
+        </div>
+        
+
+        </div>
+                        </> 
+        : showFormulario = <button onClick={showForm}  className="btnreservar">Agregar Reservación</button>
+
+
+
+
 
     return <div className="compReserv">
         <h1>Reservaciones Actuales</h1>
-        <table className="tablareserv">
+        <table className="tablareserv" id="listaReserv">
         <tr>
             <th>Nombre</th> 
             <th>email</th> 
@@ -60,7 +101,7 @@ function Reservaciones(){
             <th>Comentarios</th> 
             </tr>
         {reservaciones.length ? reservaciones.map((reservacion) => listaReservaciones(reservacion)) : 'no hay'}
-    </table>
+</table>
     
     <div>{showFormulario}</div>
     </div>
