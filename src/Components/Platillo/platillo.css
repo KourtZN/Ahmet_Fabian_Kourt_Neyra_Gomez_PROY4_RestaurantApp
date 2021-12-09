@@ -5,6 +5,7 @@
     border: 1px solid indigo;
     border-radius: 10px;
     text-align: center;
+    background-color: rgba(75, 0, 130, 0.8);
   }
 
   .platillo h1{

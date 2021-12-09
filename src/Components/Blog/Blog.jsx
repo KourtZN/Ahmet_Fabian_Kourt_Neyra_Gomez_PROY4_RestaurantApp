@@ -5,6 +5,7 @@ function Blog() {
     return (
         <div className="blog">
             <div className="articulo">
+            <p>Por Kourt Zihni. Publicado el 01/12/2021.</p>
             <h1>Cambio climático: sabor amargo</h1>
             <p>El cambio climático afecta el sabor del café: un estudio conjunto de las universidades Tufts y Montana,
                  en los Estados Unidos, comprobó que el calentamiento global está alterando el gusto, el aroma y la calidad

@@ -3,14 +3,14 @@
     width:100%;
     margin:auto;
     justify-content:space-between;
-    background-color: indigo;
+    background-color: rgba(75, 0, 130, 0.8);
     color:white;
 }
 
 .header a{
     color: white;
-    height: 70px;
-    line-height: 70px;
+    height: 110px;
+    line-height: 110px;
 }
 
 .header h1{

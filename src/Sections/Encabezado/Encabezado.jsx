@@ -7,7 +7,7 @@ function Encabezado(){
     <header className="header">
     <div className="logoyname">
     
-    <img src={require(`../../images/logo.png`).default} alt="logo" />
+    <Link to='/'><img src={require(`../../images/logo.png`).default} alt="logo" /></Link>
     <h1 className="titulo">Roca de Guía</h1>
       
     </div>
