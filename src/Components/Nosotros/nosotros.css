@@ -73,5 +73,11 @@
         border: 3px solid indigo;
         
     }
+    .desc {
+        width: 50%;
+        margin: 50px auto;
+        padding: 0;
+        text-align: center;
+    }
     
     

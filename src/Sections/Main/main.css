@@ -1,11 +1,14 @@
 .maind{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 85vh;
+    background-image: url("../../images/rdg.png");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
+
 
 }
 .maind p{

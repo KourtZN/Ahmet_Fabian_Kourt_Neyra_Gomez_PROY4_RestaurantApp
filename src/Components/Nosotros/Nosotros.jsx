@@ -23,6 +23,7 @@ function Nosotros() {
         return (
             <div className="Nosotros">
                 <div className="contacto">
+                <p className="desc">Fundado en 2021. Con la idea de proprcionar un espacio para que hagas una pausa en tu camino. Renueves tus energias, y des un poco más. </p>
                 <h2>Contacto</h2>
                 <ul>
                     <li><a href="mailto:raztenia@gmail.com">raztenia@gmail.com</a></li>
